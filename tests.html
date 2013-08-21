@@ -1,26 +1,20 @@
 <html>
   <head>
     <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
-    <title>Stock Ticker</title>
+    <title>Stock Ticker Tests</title>
     <!-- CSS files downloaded from: https://github.com/mleibman/SlickGrid -->
     <link type="text/css" href="assets/css/slick.grid.css" rel="stylesheet">
     <link type="text/css" href="assets/css/jquery-ui-1.8.16.custom.css" rel="stylesheet">
-
     <link type="text/css" href="assets/css/stockTicker.css" rel="stylesheet">
+
+    <link type="text/css" href="assets/css/jasmine.css" rel="stylesheet">
 
   </head>
   <body>
     <div class="page-header">
-      <h1>Stock Ticker</h1>
+      <h1>Stock Ticker Tests</h1>
     </div>
-    <p class="lastUpdate" style="margin-bottom: 40px;">Showing 25 results, last updated  </p>
-
-    <span class="slick-sort-indicator slick-sort-indicator-desc"></span>
-    <span class="slick-sort-indicator slick-sort-indicator-asc" style="margin-right: 10px;"></span>Click the column headers to change the sort order.
-    <div class="well">
-    <div class="slickgrid">
-
-    </div>
+    <div class="TestDiv">
     </div>
 
     <!-- ---------------------------------------------------- -->
@@ -53,6 +47,39 @@
     <script src="assets/backbone_edit/slickgrid_formatters.js"></script>
     <script src="assets/backbone_edit/slickgrid_view.js"></script>
 
+    <!-- Jasmine -->
+    <script src="assets/jasmine/jasmine.js"></script>
+    <script src="assets/jasmine/jasmine-html.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter();
+
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function(spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+
+            window.onload = function() {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+
+        })();
+    </script>
+
+
     <script src="prices.js"></script>
 
     <!-- End: Code borrowed from elsewhere -->
@@ -61,7 +88,8 @@
 
     <script src="prices_model.js"></script>   <!-- store the prices in a backbone collection -->
     <script src="prices_view.js"></script>    <!-- render the table as a backbone view -->
-    <script src="app.js"></script>
+
+    <script src="tests/tests.js"></script>
 
   </body>
 </html>

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 	// Load required NPM tasks.
 	// You must first run `npm install` in the project's root directory to get these dependencies.
     grunt.loadNpmTasks('grunt-contrib-coffee');
-	grunt.loadNpmTasks('lumbar');
+
 
 	// Parse config files
 	var lumbarConfig = grunt.file.readJSON('lumbar.json');
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 	config.meta = _.extend({}, packageConfig);
 
 	// The "grunt" command with no arguments
-	grunt.registerTask('default', ['coffee', 'lumbar:build']);
+	grunt.registerTask('default', ['coffee']);
 
 
     /* coffee script */
@@ -38,7 +38,8 @@ module.exports = function(grunt) {
                 'assets/backbone_edit/formatters.js':            'assets/backbone_edit/formatters.js.coffee',
                 'assets/backbone_edit/converters.js':            'assets/backbone_edit/converters.js.coffee',
                 'assets/backbone_edit/slickgrid_formatters.js':  'assets/backbone_edit/slickgrid_formatters.js.coffee',
-                'assets/backbone_edit/slickgrid_view.js':        'assets/backbone_edit/slickgrid_view.js.coffee'
+                'assets/backbone_edit/slickgrid_view.js':        'assets/backbone_edit/slickgrid_view.js.coffee',
+                'tests/tests.js':                                'tests/tests.js.coffee'
             },
             options: {
                 basePath: 'src/'
@@ -46,32 +47,6 @@ module.exports = function(grunt) {
         }
     },
 
-	/* FullCalendar Modules
-	----------------------------------------------------------------------------------------------------*/
-
-	grunt.registerTask('modules', 'Build the FullCalendar modules', [
-		'lumbar:build',
-		'concat:moduleVariables'
-	]);
-
-	// assemble modules
-	config.lumbar = {
-		build: {
-			build: 'lumbar.json',
-			output: 'build/out' // a directory. lumbar doesn't like trailing slash
-		}
-	};
-
-	// replace template variables (<%= %>), IN PLACE
-	config.concat.moduleVariables = {
-		options: {
-			process: true // replace
-		},
-		expand: true,
-		cwd: 'build/out/',
-		src: [ '*.js', '*.css', '!jquery*' ],
-		dest: 'build/out/'
-	};
 
 
 	// finally, give grunt the config object...
