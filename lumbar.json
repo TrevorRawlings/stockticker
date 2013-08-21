@@ -1,0 +1,47 @@
+{
+  "scope": "none",
+  "packages": {
+    "dependencies": {
+      "modules": [
+        "jquery",
+        "jquery-ui"
+      ]
+    },
+    "fullcalendar": {
+      "modules": [
+        "fullcalendar",
+        "fullcalendar.print",
+        "gcal"
+      ]
+    }
+  },
+  "modules": {
+    "jquery": {
+      "scripts": [
+        "assets/jquery-1.7.min.js"
+      ]
+    },
+    "jquery-ui": {
+      "scripts": [
+        "lib/jquery-ui-1.8.16.custom.min.js"
+      ]
+    },
+    "stockticker": {
+      "scripts": [
+        "assets/backbone.js",
+        "assets/backbone.marionette.js",
+        "assets/jquery.event.drag-2.2.js",
+        "assets/jquery-1.7.min.js",
+        "assets/jquery-ui-1.8.16.custom.min.js",
+        "assets/slickgrid_formatters.js",
+        "assets/slickgrid_view.js",
+        "prices_view.js",
+        "prices.js",
+        "app.js"
+      ],
+      "styles": [
+        "assets/jquery-ui-1.8.16.custom.css"
+      ]
+    }
+  }
+}

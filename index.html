@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <title>Stock Ticker</title>
+    <!-- CSS files downloaded from: https://github.com/mleibman/SlickGrid -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/slick.grid.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/jquery-ui-1.8.16.custom.css" rel="stylesheet">
+
+    <link type="text/css" href="assets/css/stockTicker.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>Stock Ticker</h1>
+    </div>
+    <p class="lastUpdate" style="margin-bottom: 40px;">Showing 25 results, last updated  </p>
+
+    <span class="slick-sort-indicator slick-sort-indicator-desc"></span>
+    <span class="slick-sort-indicator slick-sort-indicator-asc" style="margin-right: 10px;"></span>Click the column headers to change the sort order.
+    <div class="well">
+    <div class="slickgrid">
+
+    </div>
+    </div>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- Begin: Code borrowed from elsewhere -->
+
+    <!-- SlickGrid - downloaded from: https://github.com/mleibman/SlickGrid/tree/master/lib -->
+    <script src="assets/jquery/jquery-1.7.min.js"></script>
+    <script src="assets/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+    <script src="assets/jquery/jquery.event.drag-2.2.js"></script>
+    <script src="assets/slickgrid/slick.core.js"></script>
+    <script src="assets/slickgrid/slick.formatters.js"></script>
+    <script src="assets/slickgrid/slick.grid.js"></script>
+
+    <script src="assets/jquery/jquery.ba-resize.min.js"></script>
+
+    <!-- Underscore -->
+    <script src="assets/underscore.js"></script>
+    <script src="assets/underscore.string.js"></script>
+
+    <!-- Backbone -->
+    <script src="assets/backbone/backbone.js"></script>
+    <script src="assets/backbone/backbone.marionette.js"></script>
+
+    <!-- A wrapper to make slickgrid / backbone interfacing a little easier -->
+    <!-- https://github.com/TrevorRawlings/backbone-edit -->
+    <script src="assets/backbone_edit/find_element_mixin.js"></script>
+    <script src="assets/backbone_edit/backbone_edit_helpers.js"></script>
+    <script src="assets/backbone_edit/converters.js"></script>
+    <script src="assets/backbone_edit/formatters.js"></script>
+    <script src="assets/backbone_edit/slickgrid_formatters.js"></script>
+    <script src="assets/backbone_edit/slickgrid_view.js"></script>
+
+    <script src="prices.js"></script>
+
+    <!-- End: Code borrowed from elsewhere -->
+    <!-- ---------------------------------------------------- -->
+
+
+    <script src="prices_model.js"></script>   <!-- store the prices in a backbone collection -->
+    <script src="prices_view.js"></script>    <!-- render the table as a backbone view -->
+    <script src="app.js"></script>
+
+  </body>
+</html>

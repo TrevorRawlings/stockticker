@@ -1,0 +1,17 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+/config.yml
+/.idea/
+/.buildpath
+/.project
+/*.log
+.sass-cache/
+log/newrelic_agent_store.*
+*.coffee~
+*.hamlc~
+/node_modules/
+
+/config/application.yml
+/config/database.yml
