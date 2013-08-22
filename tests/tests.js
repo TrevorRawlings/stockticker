@@ -53,16 +53,16 @@
       return expect($('.slick-header-column').eq(0).hasClass('slick-header-column-sorted')).toEqual(true);
     });
     it("should format the values correctly", function() {
-      var $cells, expected, i, _i, _len, _ref, _results;
+      var $cells, $span, expected, i, _i, _len, _ref;
       $cells = $('.slick-row:first .slick-cell');
       expect($cells.length).toEqual(4);
-      _ref = ["ABH.L", "0.11", "-4.73%", '<span class="percent-complete-bar" style="display: inline-block;height: 6px;margin-top: 7px;background:red;width:4.73%"></span>'];
-      _results = [];
+      _ref = ["ABH.L", "0.11", "-4.73%"];
       for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
         expected = _ref[i];
-        _results.push(expect($cells.eq(i).html()).toEqual(expected));
+        expect($cells.eq(i).html()).toEqual(expected);
       }
-      return _results;
+      $span = $cells.eq(3).find('span');
+      return expect($span.length).toEqual(1);
     });
     return describe("sort by", function() {
       var $headers, check_first_and_last;

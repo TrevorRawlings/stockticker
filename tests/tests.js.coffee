@@ -46,8 +46,12 @@ describe "stockticker", ->
     $cells = $('.slick-row:first .slick-cell')
     expect( $cells.length ).toEqual(4)
 
-    for expected, i in ["ABH.L", "0.11", "-4.73%", '<span class="percent-complete-bar" style="display: inline-block;height: 6px;margin-top: 7px;background:red;width:4.73%"></span>']
+    for expected, i in ["ABH.L", "0.11", "-4.73%"]
       expect( $cells.eq(i).html()).toEqual(expected)
+
+    # '<span class="percent-complete-bar" style="display: inline-block;height: 6px;margin-top: 7px;background:red;width:4.73%"></span>'
+    $span = $cells.eq(3).find('span')
+    expect( $span.length ).toEqual(1)
 
   describe "sort by", ->
     $headers = null
