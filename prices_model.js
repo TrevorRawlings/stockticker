@@ -15,8 +15,8 @@ StockTicker.Models.Price = Backbone.Model.extend({
 
   initialize: function() {
     Backbone.Model.prototype.initialize.apply(this, arguments);
-    this.on('change:AskRealtime',   function() { this.this._AskRealtime_as_float = null; } );
-    this.on('change:PercentChange', function() { this.this._PercentChange_as_float = null; } );
+    this.on('change:AskRealtime',   function() { this._AskRealtime_as_float = null; } );
+    this.on('change:PercentChange', function() { this._PercentChange_as_float = null; } );
   },
 
   // ----------------------------------------------------------------------------
