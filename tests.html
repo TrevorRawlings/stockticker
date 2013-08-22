@@ -1,7 +1,19 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Stock Ticker Tests</title>
+    <meta name="description" content="Stock Ticker Tests">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/modernizr-2.6.2.min.js"></script>
+
     <!-- CSS files downloaded from: https://github.com/mleibman/SlickGrid -->
     <link type="text/css" href="assets/css/slick.grid.css" rel="stylesheet">
     <link type="text/css" href="assets/css/jquery-ui-1.8.16.custom.css" rel="stylesheet">
@@ -11,6 +23,10 @@
 
   </head>
   <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
     <div class="page-header">
       <h1>Stock Ticker Tests</h1>
     </div>
@@ -25,10 +41,12 @@
     <!-- ---------------------------------------------------- -->
     <!-- Begin: Code borrowed from elsewhere -->
 
-    <!-- SlickGrid - downloaded from: https://github.com/mleibman/SlickGrid/tree/master/lib -->
     <script src="assets/jquery/jquery-1.7.min.js"></script>
     <script src="assets/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+
+    <script src="js/plugins.js"></script>
     <script src="assets/jquery/jquery.event.drag-2.2.js"></script>
+
     <script src="assets/slickgrid/slick.core.js"></script>
     <script src="assets/slickgrid/slick.grid.js"></script>
 
