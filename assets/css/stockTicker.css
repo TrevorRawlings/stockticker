@@ -44,6 +44,33 @@ body {
     padding: 19px;
 }
 
+.bs-callout {
+    border-left: 5px solid #EEEEEE;
+    margin: 20px 0;
+    padding: 15px 30px 15px 15px;
+}
+
+
+.bs-callout-info {
+    background-color: #F0F7FD;
+    border-color: #D0E3F0;
+    /*border-left: 6px solid;*/
+}
+
+
+.bs-callout h4 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
 
 .slick-row.max_PercentChange .slick-cell{
     background-color: #DFF0D8;
