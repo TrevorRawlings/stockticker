@@ -49,7 +49,7 @@ classes should alter those!
   height: 5px;
   margin-left: 4px;
   margin-top: 6px;
-  float: left;
+  /*float: left;*/
 }
 
 .slick-sort-indicator-desc {
